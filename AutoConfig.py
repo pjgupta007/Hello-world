@@ -42,4 +42,11 @@ def GetHostUserPass():
     return host, user, passwd
     
 def GetChangeorIncidentFile():
-    valid=False 
+    valid=False
+    loginId=raw_input('Enter username or ID:  ')
+    while not valid:
+        config_file=raw_input('Enter change or incident configuration file:  ')
+        chg_or_inc=config_file.split('.')[0]
+        number_of_char=len(chg_or_inc)
+        if (re.search('^CHG. ',chg_or_inc) or re.search
+         
